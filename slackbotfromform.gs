@@ -4,7 +4,7 @@
 */
 
 function sendMessageToSlack(e) {
-  const itemResponses = e.response.getItemResponses();
+  const responses = e.response.getItemResponses();
   var url = "URL"; // Input slack API's URL as String
   var payload = {
     "blocks": [
@@ -23,7 +23,7 @@ function sendMessageToSlack(e) {
     "payload": JSON.stringify(payload)
   };
 
-  var response = UrlFetchApp.fetch(url, params);
+  UrlFetchApp.fetch(url, params);
 }
 
 //
